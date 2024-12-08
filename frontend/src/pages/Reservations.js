@@ -6,7 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Button } from "../components/ui/button";
 import { useToast } from '../components/ui/use-toast';
 import { Toast } from '../components/ui/toast';
-import { useTheme } from "next-themes"; // Make sure you have next-themes installed
+import { useTheme } from "next-themes";
 import axiosInstance from '../axiosConfig'; // Import the configured Axios instance
 
 function Reservations() {
@@ -18,7 +18,7 @@ function Reservations() {
   const { toast, showToast } = useToast();
 
   // Helper to get token from storage
-  const getToken = () => localStorage.getItem('token'); // Adjust this if you're using a different storage mechanism
+  const getToken = () => localStorage.getItem('token'); 
 
   useEffect(() => {
     fetchReservations();
@@ -68,7 +68,7 @@ function Reservations() {
         title: "Reservation Request Sent",
       });
       // Send email using Formspree
-      const formspreeEndpoint = 'https://formspree.io/f/mrbzddwl'; // Replace with your Formspree form ID
+      const formspreeEndpoint = 'https://formspree.io/f/mrbzddwl';
       await fetch(formspreeEndpoint, {
         method: 'POST',
         headers: {
@@ -108,7 +108,7 @@ function Reservations() {
         variant: "destructive",
       });
       // Send email using Formspree
-      const formspreeEndpoint = 'https://formspree.io/f/mrbzddwl'; // Replace with your Formspree form ID
+      const formspreeEndpoint = 'https://formspree.io/f/mrbzddwl';
       await fetch(formspreeEndpoint, {
         method: 'POST',
         headers: {

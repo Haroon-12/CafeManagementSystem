@@ -45,7 +45,7 @@ function Feedback() {
   };
 
   const getToken = () => {
-    return localStorage.getItem('token'); // Adjust based on where the token is stored
+    return localStorage.getItem('token'); 
   };
 
   const handleSubmit = async (e) => {

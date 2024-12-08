@@ -4,7 +4,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const sendEmail = (to, subject, text) => {
   const msg = {
     to,
-    from: process.env.SENDGRID_FROM_EMAIL, // Your verified sender email
+    from: process.env.SENDGRID_FROM_EMAIL,
     subject,
     text,
   };

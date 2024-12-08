@@ -11,7 +11,7 @@ import { Label } from "../components/ui/label";
 import { Input } from "../components/ui/input";
 import { useToast } from '../components/ui/use-toast';
 import { useTheme } from 'next-themes';
-import axiosInstance from '../axiosConfig'; // Import the configured Axios instance
+import axiosInstance from '../axiosConfig'; 
 
 function HelpDesk() {
   const { theme } = useTheme(); // Handle theme preferences
@@ -21,9 +21,8 @@ function HelpDesk() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm(); // React Hook Form for validation
   const { showToast } = useToast(); // Toast for user feedback
 
-  // Replace with your method for retrieving the token
   const getToken = () => {
-    return localStorage.getItem('token'); // Adjust based on where the token is stored
+    return localStorage.getItem('token'); 
   };
   // Fetch tickets on component load
   useEffect(() => {

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import axiosInstance from '../axiosConfig'; // Ensure this already includes token interceptor
+import axiosInstance from '../axiosConfig'; 
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useToast } from '../components/ui/use-toast';
@@ -12,7 +12,7 @@ import { useTheme } from "next-themes";
 
 const stripePromise = loadStripe('pk_test_51QQp5SIjmfzbMvK4LqHhnqwVqQsiAekhSWViVJSkL6kVykUbd2aNCOsAglIdDSXHkAoOkcik0wc1w3ZqmeXs4wZ100MJN42lsz');
 
-const getToken = () => localStorage.getItem('token'); // Helper to get token
+const getToken = () => localStorage.getItem('token'); 
 
 function CheckoutForm({ amount, onClose }) {
   const stripe = useStripe();

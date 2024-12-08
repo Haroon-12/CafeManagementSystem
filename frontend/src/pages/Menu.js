@@ -7,7 +7,7 @@ import { useToast } from '../components/ui/use-toast';
 import { Toast } from '../components/ui/toast';
 import { useTheme } from "next-themes";
 
-const UNSPLASH_ACCESS_KEY = 'jzIvKkSz0QKWozgGs8muY7YuWfp0Ep9sjg5eQK88nsI'; // Replace with your Unsplash API key
+const UNSPLASH_ACCESS_KEY = 'jzIvKkSz0QKWozgGs8muY7YuWfp0Ep9sjg5eQK88nsI'; 
 
 function Menu() {
   const [menuItems, setMenuItems] = useState([]);
@@ -22,7 +22,7 @@ function Menu() {
   }, []);
 
   const getToken = () => {
-    return localStorage.getItem('token'); // Adjust based on where the token is stored
+    return localStorage.getItem('token'); 
   };
 
   const fetchMenu = async () => {
@@ -69,7 +69,7 @@ function Menu() {
   const addToCart = async (item) => {
     try {
       const token = getToken();
-      const quantity = 1; // You can modify this to allow users to choose quantity
+      const quantity = 1; 
       const response = await axiosInstance.post('/customer/add', {
         menuItemId: item._id,
         quantity,
@@ -79,7 +79,6 @@ function Menu() {
         },
       });
 
-      // Optionally update local cart state if needed
       showToast({
         title: "Added to cart",
         description: `${item.name} has been added to your cart.`,
